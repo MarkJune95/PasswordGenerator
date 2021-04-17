@@ -13,13 +13,15 @@ function writePassword() {
 
 
 function generatePassword(){
- //init var password to store created password
+ //init var createdPassword to store created password
   var createdPassword = '';
 
   //prompt user for inputs and store the values in vars
   passLength = +prompt("Enter password length(8-128): ");
   console.log(passLength);
 
+
+//inputl validation for password length
   if(passLength > 7 && passLength < 129){
     var includeLower = confirm("Include lowercase?");
     console.log(includeLower);
@@ -32,6 +34,7 @@ function generatePassword(){
   //init var countCharactersType to store types of char user included
     var countCharactersType = includeLower + includeUpper + includeNumbers + includeSymbols;
 
+    //input validation for character types
     if(countCharactersType == 0){
       alert("You must include at least one characters type!")
     } else{
